@@ -1,3 +1,5 @@
+import "./global-styles.scss";
+
 function App() {
   return <div>Hello, World!</div>;
 }

@@ -1,0 +1,86 @@
+//Inconsolata
+@font-face {
+  font-family: "Inconsolata";
+  src: url("./assets/fonts/woff2/static/Inconsolata-Regular.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Inconsolata";
+  src: url("./assets/fonts/woff2/static/Inconsolata-Bold.woff2") format("woff2");
+}
+
+//Inter
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/woff2/static/Inter-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/woff2/static/Inter-Bold.woff2") format("woff2");
+}
+
+//Lora
+@font-face {
+  font-family: "Lora";
+  src: url("./assets/fonts/woff2/static/Lora-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Lora";
+  src: url("./assets/fonts/woff2/static/Lora-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Lora";
+  src: url("./assets/fonts/woff2/static/Lora-BoldItalic.woff2") format("woff2");
+}
+
+//Typography variables
+$font-inconsolata: "Inconsolata", monospace;
+$font-inter: "Inter", sans-serif;
+$font-lora: "Lora", serif;
+$regular-weight: 400;
+$bold-weight: 700;
+
+//Color variables
+$black: #050505;
+$very-dark-gray: #1f1f1f;
+$dark-gray: #2d2d2d;
+$gray: #3a3a3a;
+$light-gray: #757575;
+$very-light-gray: #e9e9e9;
+$the-lightest-grey: #f4f4f4;
+$white: #ffffff;
+$purple: #a445ed;
+$pink: #ff5252;
+
+// Typography mixins
+@mixin Heading-L($font) {
+  font-family: $font;
+  font-size: 64px;
+  font-weight: $bold-weight;
+}
+
+@mixin Heading-M($font) {
+  font-family: $font;
+  font-size: 24px;
+  font-weight: $regular-weight;
+}
+
+@mixin Heading-S($font) {
+  font-family: $font;
+  font-size: 20px;
+  font-weight: $regular-weight;
+}
+
+@mixin Body-M($font) {
+  font-family: $font;
+  font-size: 18px;
+  font-weight: $regular-weight;
+  line-height: 24px;
+}
+
+@mixin Body-S($font) {
+  font-family: $font;
+  font-size: 14px;
+  font-weight: $regular-weight;
+  text-decoration-line: underline;
+}
