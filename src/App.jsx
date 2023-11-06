@@ -1,7 +1,25 @@
+import { useEffect } from "react";
+import { useGlobalContext } from "./components/AppContext/AppContext";
 import "./global-styles.scss";
+import Header from "./components/Header/Header";
 
 function App() {
-  return <div>Hello, World!</div>;
+  const { isDark, font, bodyClass, setBodyClass } = useGlobalContext();
+
+  document.body.classList = bodyClass;
+  useEffect(() => {
+    if (isDark) {
+      setBodyClass(font + " dark");
+    } else {
+      setBodyClass(font + " light");
+    }
+  }, [font, isDark]);
+
+  return (
+    <main>
+      <Header />
+    </main>
+  );
 }
 
 export default App;

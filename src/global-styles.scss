@@ -6,4 +6,30 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: 0.1s;
+}
+
+body {
+  background-color: $white;
+  transition: 0.5s;
+
+  &.dark {
+    background-color: $black;
+  }
+
+  &.sans-serif {
+    font-family: $sans-serif;
+  }
+  &.serif {
+    font-family: $serif;
+  }
+  &.mono {
+    font-family: $mono;
+  }
+}
+
+main {
+  width: 737px;
+  margin: auto;
+  padding: 58px 0 124px;
 }

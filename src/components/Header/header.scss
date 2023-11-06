@@ -1,0 +1,152 @@
+@use "../../variables&mixins.scss" as *;
+
+header {
+  color: $dark-gray;
+  font-weight: $bold-weight;
+  @include flex-Hbetween-Vcenter;
+
+  &.sans-serif {
+    @include Body-M($sans-serif);
+  }
+  &.serif {
+    @include Body-M($serif);
+  }
+  &.mono {
+    @include Body-M($mono);
+  }
+
+  .font-and-theme {
+    @include flex-Vcenter-gap(26px);
+
+    .font {
+      @include flex-Vcenter-gap(16px);
+      height: 24px;
+      position: relative;
+
+      .chosen-font {
+        cursor: pointer;
+        transition: 0s;
+
+        &.sans-serif {
+          width: 90px;
+        }
+        &.serif {
+          width: 42px;
+        }
+        &.mono {
+          width: 36px;
+        }
+      }
+
+      ul {
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        list-style: none;
+        width: 183px;
+        height: 0;
+        border-radius: 16px;
+        background: $white;
+        box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);
+        padding: 24px;
+        top: 42px;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        transition: 0.2s;
+
+        &.active {
+          opacity: 1;
+          pointer-events: all;
+          height: 152px;
+        }
+
+        li {
+          cursor: pointer;
+          transition: 0.2s;
+
+          &:first-child {
+            font-family: $sans-serif;
+          }
+
+          &:nth-child(2) {
+            font-family: $serif;
+          }
+
+          &:last-child {
+            font-family: $mono;
+          }
+
+          &:hover {
+            color: $purple;
+          }
+        }
+      }
+    }
+
+    .pipeline {
+      display: block;
+      width: 1px;
+      height: 32px;
+      background-color: $very-light-gray;
+    }
+
+    .theme {
+      @include flex-Vcenter-gap(20px);
+
+      .theme-changer {
+        width: 40px;
+        height: 20px;
+        border-radius: 10px;
+        border: none;
+        background-color: $light-gray;
+        padding: 3px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $purple;
+        }
+
+        .circle {
+          display: block;
+          width: 14px;
+          height: 14px;
+          border-radius: 50%;
+          background-color: $white;
+        }
+      }
+    }
+  }
+}
+
+//dark Theme
+header.dark {
+  color: $white;
+
+  .font-and-theme {
+    .font {
+      ul {
+        background-color: $very-dark-gray;
+        box-shadow: 0px 5px 30px 0px $purple;
+        transition: 0.3s;
+      }
+    }
+
+    .theme {
+      .theme-changer {
+        background-color: $purple;
+
+        .circle {
+          transform: translateX(20px);
+        }
+      }
+
+      svg {
+        path {
+          stroke: $purple;
+        }
+      }
+    }
+  }
+}

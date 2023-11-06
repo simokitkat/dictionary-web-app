@@ -1,42 +1,8 @@
-//Inconsolata
-@font-face {
-  font-family: "Inconsolata";
-  src: url("./assets/fonts/woff2/static/Inconsolata-Regular.woff2")
-    format("woff2");
-}
-@font-face {
-  font-family: "Inconsolata";
-  src: url("./assets/fonts/woff2/static/Inconsolata-Bold.woff2") format("woff2");
-}
-
-//Inter
-@font-face {
-  font-family: "Inter";
-  src: url("./assets/fonts/woff2/static/Inter-Regular.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Inter";
-  src: url("./assets/fonts/woff2/static/Inter-Bold.woff2") format("woff2");
-}
-
-//Lora
-@font-face {
-  font-family: "Lora";
-  src: url("./assets/fonts/woff2/static/Lora-Regular.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Lora";
-  src: url("./assets/fonts/woff2/static/Lora-Bold.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Lora";
-  src: url("./assets/fonts/woff2/static/Lora-BoldItalic.woff2") format("woff2");
-}
-
 //Typography variables
-$font-inconsolata: "Inconsolata", monospace;
-$font-inter: "Inter", sans-serif;
-$font-lora: "Lora", serif;
+$mono: "Inconsolata", monospace;
+$sans-serif: "Inter", sans-serif;
+$serif: "Lora", serif;
+$serif-italic: "Lora-italic", serif;
 $regular-weight: 400;
 $bold-weight: 700;
 
@@ -83,4 +49,16 @@ $pink: #ff5252;
   font-size: 14px;
   font-weight: $regular-weight;
   text-decoration-line: underline;
+}
+
+//other mixins
+@mixin flex-Hbetween-Vcenter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin flex-Vcenter-gap($gap) {
+  display: flex;
+  align-items: center;
+  gap: $gap;
 }
