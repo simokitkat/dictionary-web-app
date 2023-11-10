@@ -1,0 +1,66 @@
+@use "../../variables&mixins.scss" as *;
+
+form {
+  margin: 51.5px 0 45px;
+  height: 64px;
+  position: relative;
+
+  input {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    background: $the-lightest-grey;
+    border: none;
+    outline: none;
+    padding: 20px 24px;
+    color: $dark-gray;
+    font-size: 20px;
+    font-weight: $bold-weight;
+    caret-color: $purple;
+    cursor: pointer;
+    @include font-changing-mixin;
+    transition: 0.2s;
+
+    &:hover,
+    &:focus {
+      outline: 1px solid $purple;
+    }
+
+    &::placeholder {
+      color: $dark-gray;
+      opacity: 0.25;
+    }
+  }
+
+  img {
+    position: absolute;
+    top: 24px;
+    right: 24.45px;
+  }
+
+  span {
+    @include Heading-S($sans-serif);
+    @include font-changing-mixin;
+    color: $pink;
+    position: absolute;
+    bottom: -32px;
+    display: none;
+
+    &.empty {
+      display: block;
+    }
+  }
+}
+
+//Dark Theme
+form.dark {
+  input {
+    background: $very-dark-gray;
+    color: $white;
+
+    &::placeholder {
+      color: $white;
+    }
+  }
+}

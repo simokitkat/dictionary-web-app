@@ -62,3 +62,15 @@ $pink: #ff5252;
   align-items: center;
   gap: $gap;
 }
+
+@mixin font-changing-mixin {
+  &.sans-serif {
+    font-family: $sans-serif;
+  }
+  &.serif {
+    font-family: $serif;
+  }
+  &.mono {
+    font-family: $mono;
+  }
+}

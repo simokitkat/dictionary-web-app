@@ -2,18 +2,10 @@
 
 header {
   color: $dark-gray;
+  font-size: 18px;
   font-weight: $bold-weight;
   @include flex-Hbetween-Vcenter;
-
-  &.sans-serif {
-    @include Body-M($sans-serif);
-  }
-  &.serif {
-    @include Body-M($serif);
-  }
-  &.mono {
-    @include Body-M($mono);
-  }
+  @include font-changing-mixin;
 
   .font-and-theme {
     @include flex-Vcenter-gap(26px);
@@ -55,6 +47,7 @@ header {
         flex-direction: column;
         gap: 16px;
         transition: 0.2s;
+        z-index: 2;
 
         &.active {
           opacity: 1;

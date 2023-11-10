@@ -13,6 +13,11 @@ export default function AppContext({ children }) {
   const [chosenFont, setChosenFont] = useState("Sans Serif");
   const [isClicked, setIsClicked] = useState(false);
   const [bodyClass, setBodyClass] = useState(font);
+  const [word, setWord] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
+  const [isEmpty, setIsEmpty] = useState(false);
+  const [wordDetails, setWordDetails] = useState([]);
 
   return (
     <GlobalContext.Provider
@@ -27,6 +32,16 @@ export default function AppContext({ children }) {
         setIsClicked,
         chosenFont,
         setChosenFont,
+        word,
+        setWord,
+        isLoading,
+        setIsLoading,
+        isError,
+        setIsError,
+        isEmpty,
+        setIsEmpty,
+        wordDetails,
+        setWordDetails,
       }}
     >
       {children}

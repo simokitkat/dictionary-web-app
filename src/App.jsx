@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useGlobalContext } from "./components/AppContext/AppContext";
 import "./global-styles.scss";
 import Header from "./components/Header/Header";
+import Form from "./components/Form/Form";
 
 function App() {
   const { isDark, font, bodyClass, setBodyClass } = useGlobalContext();
@@ -18,6 +19,7 @@ function App() {
   return (
     <main>
       <Header />
+      <Form />
     </main>
   );
 }
