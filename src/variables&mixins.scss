@@ -19,33 +19,28 @@ $purple: #a445ed;
 $pink: #ff5252;
 
 // Typography mixins
-@mixin Heading-L($font) {
-  font-family: $font;
+@mixin Heading-L {
   font-size: 64px;
   font-weight: $bold-weight;
 }
 
-@mixin Heading-M($font) {
-  font-family: $font;
+@mixin Heading-M {
   font-size: 24px;
   font-weight: $regular-weight;
 }
 
-@mixin Heading-S($font) {
-  font-family: $font;
+@mixin Heading-S {
   font-size: 20px;
   font-weight: $regular-weight;
 }
 
-@mixin Body-M($font) {
-  font-family: $font;
+@mixin Body-M {
   font-size: 18px;
   font-weight: $regular-weight;
   line-height: 24px;
 }
 
-@mixin Body-S($font) {
-  font-family: $font;
+@mixin Body-S {
   font-size: 14px;
   font-weight: $regular-weight;
   text-decoration-line: underline;

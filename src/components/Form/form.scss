@@ -40,7 +40,7 @@ form {
   }
 
   span {
-    @include Heading-S($sans-serif);
+    @include Heading-S;
     @include font-changing-mixin;
     color: $pink;
     position: absolute;

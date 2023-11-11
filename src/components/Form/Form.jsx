@@ -1,19 +1,13 @@
 import "./form.scss";
 import search from "../../assets/images/icon-search.svg";
 import { useGlobalContext } from "../AppContext/AppContext";
+import useFetchData from "./useFetchData";
 
 export default function Form() {
-  const {
-    font,
-    word,
-    setWord,
-    setWordDetails,
-    setIsLoading,
-    setIsError,
-    isEmpty,
-    setIsEmpty,
-    isDark,
-  } = useGlobalContext();
+  const { font, word, setWord, isEmpty, setIsEmpty, isDark } =
+    useGlobalContext();
+  const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+  const getWord = useFetchData(url);
 
   const handleWordChange = (e) => {
     setIsEmpty(false);
@@ -23,39 +17,11 @@ export default function Form() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
-
-    console.log(url);
-
     if (word === "") {
       setIsEmpty(true);
+      return;
     } else {
       setIsEmpty(false);
-    }
-
-    async function getWord() {
-      setIsLoading(true);
-      try {
-        const request = await fetch(url);
-
-        if (!request.ok) {
-          setIsError(true);
-          setIsLoading(false);
-          return;
-        }
-
-        const response = await request.json();
-        console.log(response);
-
-        setWordDetails(response);
-        setIsLoading(false);
-        setIsError(false);
-      } catch (error) {
-        console.log(error);
-
-        setIsLoading(false);
-        setIsError(true);
-      }
     }
 
     getWord();

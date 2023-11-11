@@ -3,6 +3,7 @@ import { useGlobalContext } from "./components/AppContext/AppContext";
 import "./global-styles.scss";
 import Header from "./components/Header/Header";
 import Form from "./components/Form/Form";
+import Loading from "./components/Loading/Loading";
 
 function App() {
   const { isDark, font, bodyClass, setBodyClass } = useGlobalContext();
@@ -20,6 +21,7 @@ function App() {
     <main>
       <Header />
       <Form />
+      <Loading />
     </main>
   );
 }

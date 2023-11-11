@@ -1,0 +1,33 @@
+@use "../../variables&mixins.scss" as *;
+
+.loading {
+  height: 204px;
+  text-align: center;
+  color: $dark-gray;
+  margin-top: 132px;
+
+  &__icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  h2 {
+    margin: 44px 0 24px;
+    @include Heading-S;
+    font-weight: $bold-weight;
+  }
+
+  p {
+    color: $light-gray;
+    @include Body-M;
+  }
+
+  &.hidden {
+    display: none;
+  }
+}
+
+//Dark Theme
+.loading.dark {
+  color: $white;
+}
