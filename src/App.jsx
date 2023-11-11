@@ -4,6 +4,7 @@ import "./global-styles.scss";
 import Header from "./components/Header/Header";
 import Form from "./components/Form/Form";
 import Loading from "./components/Loading/Loading";
+import Error from "./components/Error/Error";
 
 function App() {
   const { isDark, font, bodyClass, setBodyClass } = useGlobalContext();
@@ -22,6 +23,7 @@ function App() {
       <Header />
       <Form />
       <Loading />
+      <Error />
     </main>
   );
 }

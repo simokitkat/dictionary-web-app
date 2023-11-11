@@ -1,0 +1,28 @@
+@use "../../variables&mixins.scss" as *;
+
+.error {
+  height: 204px;
+  text-align: center;
+  color: $dark-gray;
+  margin-top: 132px;
+
+  h2 {
+    margin: 44px 0 24px;
+    @include Heading-S;
+    font-weight: $bold-weight;
+  }
+
+  p {
+    color: $light-gray;
+    @include Body-M;
+  }
+
+  &.hidden {
+    display: none;
+  }
+}
+
+//Dark Theme
+.error.dark {
+  color: $white;
+}
