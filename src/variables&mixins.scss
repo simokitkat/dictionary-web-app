@@ -69,3 +69,19 @@ $pink: #ff5252;
     font-family: $mono;
   }
 }
+
+@mixin synonym-antonym {
+  margin-top: 56px;
+  @include flex-Vcenter-gap(28.67px);
+
+  span {
+    color: $light-gray;
+    @include Heading-S;
+  }
+
+  p {
+    color: $purple;
+    font-size: 20px;
+    font-weight: $bold-weight;
+  }
+}

@@ -4,13 +4,23 @@ import { useGlobalContext } from "../AppContext/AppContext";
 import useFetchData from "./useFetchData";
 
 export default function Form() {
-  const { font, word, setWord, isEmpty, setIsEmpty, isDark } =
-    useGlobalContext();
+  const {
+    font,
+    word,
+    setWord,
+    isEmpty,
+    setIsEmpty,
+    isDark,
+    setIsLoading,
+    setIsError,
+  } = useGlobalContext();
   const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
   const getWord = useFetchData(url);
 
   const handleWordChange = (e) => {
     setIsEmpty(false);
+    setIsLoading(false);
+    setIsError(false);
     setWord(e.target.value);
   };
 

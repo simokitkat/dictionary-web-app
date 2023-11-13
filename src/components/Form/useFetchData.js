@@ -5,12 +5,16 @@ export default function useFetchData(link) {
 
   async function getWord() {
     setIsLoading(true);
+    setIsError(false);
+    setWordDetails([]);
+
     try {
       const request = await fetch(link);
 
       if (!request.ok) {
         setIsError(true);
         setIsLoading(false);
+        setWordDetails([]);
         return;
       }
 

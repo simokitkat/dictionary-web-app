@@ -1,0 +1,197 @@
+@use "../../variables&mixins.scss" as *;
+
+.dictionary-response {
+  .main-word {
+    color: $dark-gray;
+    @include Heading-L;
+    margin-bottom: 40px;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .word-phonetics {
+    margin-bottom: 40px;
+
+    .text {
+      margin-bottom: 20px;
+
+      h3 {
+        color: $very-dark-gray;
+        @include Heading-L;
+        font-size: 2.5rem;
+      }
+
+      p {
+        @include Heading-M;
+        color: $purple;
+      }
+    }
+
+    .phonetics {
+      @include flex-Hbetween-Vcenter;
+      flex-wrap: wrap;
+
+      .phonetic {
+        height: 40px;
+        @include flex-Hbetween-Vcenter;
+        gap: 20px;
+
+        p {
+          @include Heading-M;
+          color: $purple;
+        }
+
+        svg {
+          width: 35px;
+          cursor: pointer;
+
+          &:hover {
+            circle {
+              opacity: 1;
+              transition: 0.4s;
+            }
+
+            path {
+              transition: 0.4s;
+              fill: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .meanings {
+    .meaning {
+      margin-bottom: 40px;
+      color: $dark-gray;
+
+      .speech {
+        @include flex-Vcenter-gap(20px);
+        margin-bottom: 40px;
+
+        h3 {
+          font-weight: $bold-weight;
+          font-size: 24px;
+
+          &.sans-serif {
+            font-style: italic;
+          }
+
+          &.serif {
+            font-weight: $regular-weight;
+          }
+        }
+
+        .line {
+          width: 100%;
+          height: 1px;
+          background-color: $very-light-gray;
+        }
+      }
+
+      & > span {
+        display: block;
+        color: $light-gray;
+        @include Heading-S;
+        margin-bottom: 25.3px;
+      }
+
+      .definition {
+        padding-left: 46px;
+        margin-bottom: 13px;
+
+        ul {
+          list-style: none;
+
+          li {
+            position: relative;
+            @include Body-M;
+
+            &::before {
+              content: "";
+              position: absolute;
+              left: -20px;
+              top: 10px;
+              width: 5px;
+              height: 5px;
+              border-radius: 50%;
+              background-color: $purple;
+            }
+          }
+        }
+
+        .example {
+          margin-top: 13px;
+
+          p {
+            color: $light-gray;
+            @include Body-M;
+          }
+        }
+      }
+
+      .synonyms,
+      .antonyms {
+        @include synonym-antonym;
+      }
+    }
+  }
+
+  .sources {
+    margin-top: 40px;
+    border-top: 1px solid $very-light-gray;
+    padding-top: 19px;
+
+    .source {
+      @include flex-Vcenter-gap(20px);
+
+      span {
+        @include Body-S;
+        color: $light-gray;
+      }
+
+      a {
+        @include Body-S;
+        @include flex-Vcenter-gap(9px);
+        color: $dark-gray;
+      }
+    }
+  }
+}
+
+//dark theme
+.dictionary-response.dark {
+  .main-word {
+    color: $white;
+  }
+
+  .word-phonetics {
+    .text {
+      h3 {
+        color: $very-light-gray;
+      }
+    }
+  }
+
+  .meanings {
+    .meaning {
+      color: $white;
+      .speech {
+        .line {
+          background-color: $gray;
+        }
+      }
+    }
+  }
+
+  .sources {
+    border-color: $gray;
+
+    .source {
+      a {
+        color: $white;
+      }
+    }
+  }
+}

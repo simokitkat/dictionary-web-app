@@ -15,9 +15,9 @@ export default function Font() {
   return (
     <div className="font">
       <div className={font}>
-        <span className="chosen-font" onClick={() => setIsClicked(!isClicked)}>
+        <h1 className="chosen-font" onClick={() => setIsClicked(!isClicked)}>
           {chosenFont}
-        </span>
+        </h1>
         <ul className={isClicked ? "active" : ""}>
           {fonts.map((font) => {
             return (

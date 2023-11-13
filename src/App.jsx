@@ -5,6 +5,7 @@ import Header from "./components/Header/Header";
 import Form from "./components/Form/Form";
 import Loading from "./components/Loading/Loading";
 import Error from "./components/Error/Error";
+import DictionaryResponse from "./components/DictionaryResponse/DictionaryResponse";
 
 function App() {
   const { isDark, font, bodyClass, setBodyClass } = useGlobalContext();
@@ -24,6 +25,7 @@ function App() {
       <Form />
       <Loading />
       <Error />
+      <DictionaryResponse />
     </main>
   );
 }
