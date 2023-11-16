@@ -4,7 +4,6 @@
   .main-word {
     color: $dark-gray;
     @include Heading-L;
-    margin-bottom: 40px;
     word-wrap: break-word;
     hyphens: auto;
   }
@@ -13,10 +12,10 @@
     margin-bottom: 40px;
 
     .text {
-      margin-bottom: 20px;
+      margin: 20px 0;
 
       h3 {
-        color: $very-dark-gray;
+        color: $light-gray;
         @include Heading-L;
         font-size: 2.5rem;
       }
@@ -24,6 +23,7 @@
       p {
         @include Heading-M;
         color: $purple;
+        margin-top: 20px;
       }
     }
 
@@ -166,14 +166,6 @@
     color: $white;
   }
 
-  .word-phonetics {
-    .text {
-      h3 {
-        color: $very-light-gray;
-      }
-    }
-  }
-
   .meanings {
     .meaning {
       color: $white;
@@ -195,3 +187,5 @@
     }
   }
 }
+
+// Tablet version matches PC one

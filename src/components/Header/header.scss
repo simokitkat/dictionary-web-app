@@ -145,3 +145,17 @@ header.dark {
     }
   }
 }
+
+// ****** //
+// Tablet //
+// ****** //
+
+@media (width < 800px) {
+  header {
+    .font-and-theme {
+      .font {
+        @include flex-Vcenter-gap(19px);
+      }
+    }
+  }
+}

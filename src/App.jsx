@@ -8,13 +8,16 @@ import Error from "./components/Error/Error";
 import DictionaryResponse from "./components/DictionaryResponse/DictionaryResponse";
 
 function App() {
-  const { isDark, font, bodyClass, setBodyClass } = useGlobalContext();
+  const { isDark, setIsDark, font, bodyClass, setBodyClass } =
+    useGlobalContext();
 
   document.body.classList = bodyClass;
   useEffect(() => {
-    if (isDark) {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches || isDark) {
+      setIsDark(true);
       setBodyClass(font + " dark");
     } else {
+      setIsDark(false);
       setBodyClass(font + " light");
     }
   }, [font, isDark]);

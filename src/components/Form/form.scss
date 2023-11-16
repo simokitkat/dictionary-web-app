@@ -64,3 +64,13 @@ form.dark {
     }
   }
 }
+
+// ****** //
+// Tablet //
+// ****** //
+
+@media (width<800px) {
+  form {
+    margin: 51.5px 0 43px;
+  }
+}

@@ -71,7 +71,7 @@ $pink: #ff5252;
 }
 
 @mixin synonym-antonym {
-  margin-top: 56px;
+  margin-top: 40px;
   @include flex-Vcenter-gap(28.67px);
 
   span {

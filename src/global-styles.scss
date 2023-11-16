@@ -24,3 +24,14 @@ main {
   margin: auto;
   padding: 58px 0 124px;
 }
+
+// ****** //
+// Tablet //
+// ****** //
+
+@media (width<800px) {
+  main {
+    width: 89.71%;
+    padding: 58px 0 118px;
+  }
+}
