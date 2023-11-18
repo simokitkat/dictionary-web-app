@@ -19,7 +19,6 @@ export default function useFetchData(link) {
       }
 
       const response = await request.json();
-      console.log(response);
 
       setWordDetails(response);
       setIsLoading(false);

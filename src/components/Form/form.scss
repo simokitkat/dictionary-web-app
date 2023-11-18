@@ -45,6 +45,7 @@ form {
     color: $pink;
     position: absolute;
     bottom: -32px;
+    left: 10px;
     display: none;
 
     &.empty {
@@ -72,5 +73,30 @@ form.dark {
 @media (width<800px) {
   form {
     margin: 51.5px 0 43px;
+  }
+}
+
+// ****** //
+// Mobile //
+// ****** //
+
+@media (width<500px) {
+  form {
+    margin: 24px 0;
+    height: 48px;
+
+    input {
+      padding: 14.5px 24px;
+      font-size: 16px;
+    }
+
+    img {
+      top: 14.5px;
+    }
+
+    span {
+      font-size: 16px;
+      bottom: -24px;
+    }
   }
 }

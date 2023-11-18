@@ -11,16 +11,23 @@ function App() {
   const { isDark, setIsDark, font, bodyClass, setBodyClass } =
     useGlobalContext();
 
-  document.body.classList = bodyClass;
+  document.body.className = bodyClass;
+
   useEffect(() => {
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches || isDark) {
+    if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
       setIsDark(true);
-      setBodyClass(font + " dark");
     } else {
       setIsDark(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isDark) {
+      setBodyClass(font + " dark");
+    } else {
       setBodyClass(font + " light");
     }
-  }, [font, isDark]);
+  }, [isDark, font]);
 
   return (
     <main>

@@ -189,3 +189,93 @@
 }
 
 // Tablet version matches PC one
+
+// Mobile:
+
+@media (width<500px) {
+  .dictionary-response {
+    .main-word {
+      font-size: 32px;
+    }
+
+    .word-phonetics {
+      margin-bottom: 30px;
+
+      .text {
+        h3 {
+          font-size: 1.6rem;
+        }
+
+        p {
+          @include Body-M;
+        }
+      }
+
+      .phonetics {
+        .phonetic {
+          p {
+            @include Body-M;
+          }
+        }
+      }
+    }
+
+    .meanings {
+      .meaning {
+        margin-bottom: 32px;
+
+        .speech {
+          margin-bottom: 32px;
+
+          h3 {
+            font-size: 18px;
+          }
+        }
+
+        & > span {
+          font-size: 16px;
+          margin-bottom: 17px;
+        }
+
+        .definition {
+          padding-left: 24px;
+
+          ul {
+            li {
+              font-size: 15px;
+            }
+          }
+
+          .example {
+            p {
+              font-size: 15px;
+            }
+          }
+        }
+
+        .synonyms,
+        .antonyms {
+          margin-top: 24px;
+          span {
+            font-size: 16px;
+          }
+
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .sources {
+      margin-top: 32px;
+      padding-top: 24px;
+
+      .source {
+        align-items: flex-start;
+        gap: 8px;
+        flex-direction: column;
+      }
+    }
+  }
+}

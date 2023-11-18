@@ -26,3 +26,21 @@
 .error.dark {
   color: $white;
 }
+
+//mobile
+
+@media (max-width: 500px) {
+  .error {
+    img {
+      width: 40px;
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+}

@@ -31,3 +31,17 @@
 .loading.dark {
   color: $white;
 }
+
+//Mobile
+
+@media (width<500px) {
+  .loading {
+    h2 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+}

@@ -9,8 +9,6 @@ export default function Word({ wordsArr, i, oneWord }) {
     return phoneticObject.audio && phoneticObject.text;
   });
 
-  console.log(playablePhonetics);
-
   const handlePlayAudio = (audioObj) => {
     const audioFile = new Audio(audioObj.audio);
     audioFile.play();

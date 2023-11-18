@@ -159,3 +159,27 @@ header.dark {
     }
   }
 }
+
+// ****** //
+// Mobile //
+// ****** //
+
+@media (width < 500px) {
+  header {
+    font-size: 14px;
+
+    .font-and-theme {
+      @include flex-Vcenter-gap(16px);
+
+      .font {
+        .chosen-font {
+          font-size: 14px;
+        }
+      }
+
+      .theme {
+        @include flex-Vcenter-gap(12px);
+      }
+    }
+  }
+}

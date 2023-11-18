@@ -13,6 +13,7 @@ body {
   background-color: $white;
   transition: 0.5s;
   @include font-changing-mixin;
+  min-width: 320px;
 
   &.dark {
     background-color: $black;
@@ -33,5 +34,16 @@ main {
   main {
     width: 89.71%;
     padding: 58px 0 118px;
+  }
+}
+
+// ****** //
+// Mobile //
+// ****** //
+
+@media (width<500px) {
+  main {
+    width: 87.2%;
+    padding: 24px 0 85px;
   }
 }
