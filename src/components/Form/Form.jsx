@@ -47,7 +47,7 @@ export default function Form() {
         value={word}
         onChange={handleWordChange}
       />
-      <img src={search} alt="search icon" />
+      <img src={search} alt="search icon" onClick={handleSubmit} />
       <span className={isEmpty ? `empty ${font}` : font}>
         Whoops, can’t be empty…
       </span>
